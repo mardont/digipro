@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&display=swap');
-@media screen min-width: 100px;
 
 body {
     padding: 0;
@@ -70,3 +69,16 @@ h1 {
     padding: 5px 0 10px 0;
     line-height: 1.5em;
 }
+
+@media (max-width: 600px){
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+}
+input[type="submit"] {
+    margin: 20px 10px;
+    width: 100%;
+    max-width: 500px;
+    font-weight: 700;
+}
+
+};
