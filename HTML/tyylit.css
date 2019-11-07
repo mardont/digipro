@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&display=swap');
+@media screen min-width: 100px;
+
+body {
+    padding: 0;
+    margin: 0;
+	background: #ccc url(white-waves.png);
+}
+#main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 12px;
+    line-height: 1.6em;
+    background: #fff;
+    padding: 25px;
+    border-left: 7px solid #ddd;
+    border-right: 7px solid #ddd;
+}
+form {
+    padding-top: 40px;
+}
+.lomaketeksti {
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    font-weight: 700;
+    vertical-align: top;
+    padding-right: 50px;
+}
+input, select, textarea {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 12px;
+    background: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+select {
+    width: 100%;
+    max-width: 318px;
+    color: #000;
+}
+option {
+    color: #000;
+}
+option:first-child {
+    color: #808080;
+}
+.valinta {
+    display: block;
+    margin: -20px 0 0 205px;
+}
+input[type="radio"], input[type="checkbox"] {
+    margin-right: -130px;
+}
+input[type="submit"] {
+    margin: 20px 10px;
+    width: 100%;
+    max-width: 500px;
+    font-weight: 700;
+}
+h1 {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 5px 0 10px 0;
+    line-height: 1.5em;
+}
