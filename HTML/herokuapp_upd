@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Digipro kysely</title>
+    <link rel="stylesheet" type="text/css" href="tyylit.css">
+    <script type="text/javascript" src="http://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=-1rESo6axQgVK0k8w2e3neAlTGrGp3BrtDdxPJCdjH-LVrUbNhZoAVXhoDqlwzwt7B3Aj-FgIjXMUAguiJL2Fw3zT6ik3ySmF4Veu06Nebw" charset="UTF-8"></script></head>
+    
+    <body>
+        
+    <form id="lomake"></form>
+    
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    
+    <script>
+        $.getJSON("https://question-aika.herokuapp.com/questions/", function(data){
+            var items =[]; //taulukko, johon kerätään lomake
+            
+            //jos kaarisulku
+            items.push(data.questions.question);
+            items.push("<input type=text id="+data.questions.id+">");
+            
+            //jos hakasulku
+            //$.each(data, function(key,d){
+            //items.push(d.questions.id);
+            //});
+             items.push("<input type=submit onclick=laheta>");
+            // tulostus
+            $("#lomake").append(items.join(" "));
+        });
+    </script>
+    
+    </body>
+</html>
