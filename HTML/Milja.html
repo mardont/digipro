@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" src="http://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=uwfa-LyZ4L3N5cClH6RqIZoGM_E-Nmk0Aw32r0tdlmn_qQxloEM-XdTLw9C8R8aE2tWRtekbjtaUn8UeteixBlI5-Txxpgb2AmW2hj-8A8U" charset="UTF-8"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-152521728-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-152521728-1');
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>HTML-lomake 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="tyylit.css">
+</head>
+<body>
+    <div id="main">
+        <h1>Kysely opiskelijoiden asumistyytyväisyydestä</h1>
+        <p>Lorem ipsum dolor sit amet jee</p>
+        
+        <form onsubmit="return false">  
+            <span class="lomaketeksti">Ikä:</span>
+                <input type="number" name="ika" placeholder="Ikä" autofocus="autofocus">
+            <br><br>
+
+            <span class="lomaketeksti">Sukupuoli:</span>
+            <span class="valinta">
+                <label><input type="radio" name="skp" value="nainen">Nainen</label><br>
+                <label><input type="radio" name="skp" value="mies">Mies</label><br>
+                <label><input type="radio" name="skp" value="muuskp">Muu/En halua vastata</label><br>
+            </span>
+            <br><br>
+
+            <span class="lomaketeksti">Asuinkunta:</span>
+            <select name="asuinkunta">
+                <option value="" selected="selected">Valitse...</option>
+                <option value="helsinki">Helsinki</option>
+                <option value="espoo">Espoo</option>
+                <option value="kauniainen">Kauniainen</option>
+                <option value="vantaa">Vantaa</option>
+            </select>
+            <br><br>
+
+            <span class="lomaketeksti">Asutko...</span>
+            <select name="asumismuoto">
+                <option value="" selected="selected">Valitse...</option>
+                <option value="">Yksin</option>
+                <option value="">Kimppakämpässä</option>
+                <option value="">Soluasunnossa</option>
+                <option value="">Puolison kanssa</option>
+                <option value="">Vanhempien tai muun perheen luona</option>
+            </select>
+            <br><br>
+
+            <span class="lomaketeksti">Asumiskulut ja muut kiinteät kulut (€/kk):</span>
+            <input type="number" name="kulut" placeholder="Arvio kuluistasi kuukausitasolla">
+            <br><br>
+
+            <span class="lomaketeksti">Saatko opintotukea tai muita Kelan tukia?</span>
+            <span class="valinta">
+                <label><input type="checkbox" name="tuki" value="opintotuki">Opintotukea</label><br>
+                <label><input type="checkbox" name="tuki" value="asumistuki">Asumistukea</label><br>
+                <label><input type="checkbox" name="tuki" value="tttuki">Toimeentulotukea</label><br>
+                <label><input type="checkbox" name="tuki" value="muutuki">Muuta tukea</label><br>
+                <label><input type="checkbox" name="tuki" value="eitukea">En saa mitään tukia</label><br>
+            </span>
+            <br><br>
+
+            <span class="lomaketeksti">Nostatko opintolainaa?</span>
+            <span class="valinta">
+                <label><input type="radio" name="laina" value="klaina">Kyllä</label><br>
+                <label><input type="radio" name="laina" value="elaina">En</label><br>
+            </span>
+            <br><br>
+
+            <span class="lomaketeksti">Käytkö töissä koulun ohella?</span>
+            <span class="valinta">
+                <label><input type="radio" name="tyot" value="ktyot">Kyllä</label><br>
+                <label><input type="radio" name="tyot" value="etyot">En</label><br>
+            </span>
+            <br><br>
+
+            <span class="lomaketeksti">Pakollisten kulujen jälkeen jäljellä oleva raha (€/kk):</span>
+                <input type="number" name="rahajaljella" placeholder="Jäljelle jäävä käyttöraha kuukausittain">
+            <br><br>
+
+             <span class="lomaketeksti">Kuinka tyytyväinen olet nykyiseen asumistilanteeseesi asteikolla 1-5?</span>
+             <span class="valinta">
+                <label><input type="radio" name="tyytyvaisyys" value="">5 Olen tyytyväinen, enkä muuttaisi mitään</label><br>
+                <label><input type="radio" name="tyytyvaisyys" value="">4 Melko tyytyväinen, mutta on hieman parannettavaa</label><br>
+                <label><input type="radio" name="tyytyvaisyys" value="">3 Ei hyvä, mutta ei kamalan huonokaan</label><br>
+                <label><input type="radio" name="tyytyvaisyys" value="">2 </label><br>
+                <label><input type="radio" name="tyytyvaisyys" value="">1 </label><br>
+             </span>
+             <br><br>
+
+             <span class="lomaketeksti">Koetko, että rahasi riittävät normaaliin elämiseen?</span>
+             <span class="valinta">
+                 <label><input type="radio" name="riittavyys" value="kriittavat">Kyllä</label><br>
+                 <label><input type="radio" name="riittavyys" value="eriittavat">En</label><br>
+                 <label><input type="radio" name="riittavyys" value="vriittavat">Vaihtelevasti</label><br>
+             </span>
+             <br><br>
+            
+            <span class="lomaketeksti">Vapaa kommentti (max. 500 merkkiä):</span>
+                <textarea name="kommentti" maxlength="500" placeholder="Tuliko jotain muuta asiaan liittyvää mieleen? Kommentoi tähän!"></textarea>
+            <br><br>
+
+             <br><input type="submit" value="Lähetä" onclick="palaute()">
+         </form>
+                
+        <div id="yhteenveto"></div>
+    </div>
+        
+    <script>
+        function palaute(){
+        document.getElementById("yhteenveto").innerHTML="Kiitos vastauksestasi!";
+        }
+    </script>
+               
+</body>
+</html>
