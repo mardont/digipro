@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Digipro kysely</title>
+    <link rel="stylesheet" type="text/css" href="tyylit.css">
+    <script type="text/javascript" src="http://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ieCl-TKVcaBeM3IXIWsf_PYyRtMHWF6q9V5xqHkbZBC0IwMMCsKVqnJlEwQAorFgW7Xznx6nKhxwvwI-wcSZYN_GiM0RBf7iqiMZ6difZJA" charset="UTF-8"></script></head>
+    
+    <body>
+        
+
+    <h1>Kysely opisklijoiden asumistyytyväisyydestä</h1>
+        
+        
+    <form id="lomake"></form>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script>
+        var lomakekentta = [];
+        $.getJSON("https://question-aika.herokuapp.com/api/questions/", function(data){
+            var items =[]; //taulukko, johon kerätään lomake
+         
+            
+            //jos hakasulku
+            $.each(data.questions, function(key,d){
+            items.push(d.question); 
+
+            
+            if (d.type=="INPUT") {items.push("<br><input type=text id="+d.id+"><br><br>");
+                                 lomakekentta.push(d.id);
+                                };
+
+            if (d.type=="TEXTAREA") {items.push("<br><input type=textarea id="+d.id+"><br><br>");
+                                 lomakekentta.push(d.id);
+                                };
+                
+            if (d.type=="NUMBER")  {
+                items.push("<br><input type=number id= "+d.id+ " name="+d.id+"><br>");
+                 lomakekentta.push(d.id);
+            };
+                
+            if (d.type=="SELECT_MULTIPLE")  {
+                items.push("<br><input type=checkbox id= "+d.id+ " name="+d.id+"><br>");
+                 lomakekentta.push(d.id);
+            };
+            
+            if (d.type=="SELECT_ONE")  {
+                for (i = 0; i < d.choices.length; i++) {
+                    var vaihtoehto = d.choices[i];
+                    console.log(d.choices[i]);
+                items.push("<br><input type=radio value="+vaihtoehto.id+" id= "+d.id+ " name="+d.choices+">"+vaihtoehto.choice+"<br>");
+                lomakekentta.push(d.id);
+                
+                }
+                
+            };
+              });
+            
+            items.push("<input type=submit onclick=laheta()>");
+            // tulostus
+            $("#lomake").append(items.join(" "));
+          
+        
+        });
+        
+        
+            function laheta(){ alert(lomakekentta.length);
+                for (i = 0; i < lomakekentta.length; i++) {
+                    alert(document.getElementById(lomakekentta[i]).value);
+                }
+                
+                document.getElementById("yhteenveto").innerHTML="Kiitos vastauksestasi!";
+            };
+     
+    
+    </script>
+    
+    </body>
+</html>
+
